@@ -30,20 +30,22 @@
 			}
 
 			//render调用几次？ ———— 1+n次 1是初始化的那次 n是状态更新的次数
+			// 相当于created() + 状态更新
 			render(){
 				console.log('render');
 				//读取状态
 				const {isHot,wind} = this.state
+				// onClick={} ———— 调用函数
 				return <h1 onClick={this.changeWeather}>今天天气很{isHot ? '炎热' : '凉爽'}，{wind}</h1>
 			}
 
 			//changeWeather调用几次？ ———— 点几次调几次
+			// 相当于methods 可以直接写在render中，但是要使用this，所以要绑定this，this指向 Weather
 			changeWeather(){
 				//changeWeather放在哪里？ ———— Weather的原型对象上，供实例使用
 				//由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用
 				//类中的方法默认开启了局部的严格模式，所以changeWeather中的this为undefined
 				
-				console.log('changeWeather');
 				//获取原来的isHot值
 				const isHot = this.state.isHot
 				//严重注意：状态必须通过setState进行更新,且更新是一种合并，不是替换。
