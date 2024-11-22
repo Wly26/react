@@ -22,7 +22,7 @@
 		class Person extends React.Component{
 			render(){
 				// console.log(this);
-				const {name,age,sex} = this.props
+				const {name,age,sex} = this.props // 数组解构
 				return (
 					<ul>
 						<li>姓名：{name}</li>
@@ -32,7 +32,7 @@
 				)
 			}
 		}
-		//渲染组件到页面
+		//渲染组件到页面 - html标签可以写入属性，组件标签可以接收标签属性，但是标签属性必须使用props接收
 		ReactDOM.render(<Person name="jerry" age={19}  sex="男"/>,document.getElementById('test1'))
 		ReactDOM.render(<Person name="tom" age={18} sex="女"/>,document.getElementById('test2'))
 
