@@ -33,6 +33,10 @@
 						}
 					*/
 		//#endregion
+
+
+		// onChange={this.saveFormData}：是把一个函数，给了onChange，可以实时调用
+		// onChange={this.saveFormData('username')}：是把一个返回值，给了onChange，但是这个返回值是undefined
 		//创建组件
 		class Login extends React.Component{
 			//初始化状态
@@ -41,7 +45,7 @@
 				password:'' //密码
 			}
 
-			//保存表单数据到状态中
+			//保存表单数据到状态中，这是一个高阶函数
 			saveFormData = (dataType)=>{
 				return (event)=>{
 					this.setState({[dataType]:event.target.value})
