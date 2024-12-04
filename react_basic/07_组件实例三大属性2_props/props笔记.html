@@ -35,7 +35,7 @@
 				age:18
 			}
 			//自定义方法————要用赋值语句的形式+箭头函数
-			changeWeather = ()=>{
+			change = ()=>{
 				const sex = this.state.sex
 				this.setState({sex:'男'})
 			}
@@ -47,7 +47,7 @@
 				return (
 					<ul>
 						<li>姓名：{name}</li>
-						<li onClick={this.changeWeather}>性别：{sex}</li>
+						<li onClick={this.change}>性别：{sex}</li>
 						<li>年龄：{age+1}</li>
 					</ul>
 				)
@@ -61,7 +61,7 @@
 
 
 
-		//创建组件
+		//创建组件 --可以渲染状态吗？
 		function PersonFn (props){
 			const {name,age,sex} = props
 			return (
