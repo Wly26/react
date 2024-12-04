@@ -128,7 +128,7 @@
 		
 		//子组件B
 		class B extends React.Component{
-			//组件将要接收新的props的钩子
+			//组件将要接收新的props的钩子（首次加载不算新的传值，所以不执行）
 			componentWillReceiveProps(props){
 				console.log('B---componentWillReceiveProps',props);
 			}
