@@ -4,6 +4,7 @@ import axios from 'axios'
 export default class App extends Component {
 
 	getStudentData = ()=>{
+		// api1：如果http://localhost:3000没有这个接口，就在5000端口找接口
 		axios.get('http://localhost:3000/api1/students').then(
 			response => {console.log('成功了',response.data);},
 			error => {console.log('失败了',error);}
