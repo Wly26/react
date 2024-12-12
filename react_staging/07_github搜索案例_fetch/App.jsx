@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Search from './components/Search'
-import List from './components/List'
+import Search from './component/Search'
+import List from './component/List'
 
 export default class App extends Component {
 	render() {

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import {Route} from 'react-router-dom'
 import Home from './pages/Home' //Home是路由组件
 import About from './pages/About' //About是路由组件
-import Header from './components/Header' //Header是一般组件
-import MyNavLink from './components/MyNavLink'
+import Header from './component/Header' //Header是一般组件
+import MyNavLink from './component/MyNavLink'
 
 export default class App extends Component {
 	render() {
