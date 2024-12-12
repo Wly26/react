@@ -5,8 +5,6 @@ import About from './pages/About' //About是路由组件
 import Header from './component/Header' //Header是一般组件
 import MyNavLink from './component/MyNavLink'
 
-import './App.css'
-
 export default class App extends Component {
 	render() {
 		return (
