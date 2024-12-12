@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import {Route} from 'react-router-dom'
+import {Route,Switch} from 'react-router-dom'
 import Home from './pages/Home' //Home是路由组件
 import About from './pages/About' //About是路由组件
-import Header from './component/Header' //Header是一般组件
-import MyNavLink from './component/MyNavLink'
-
-import './App.css'
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import Header from './components/Header' //Header是一般组件
+import MyNavLink from './components/MyNavLink'
+import Test from './pages/Test'
 
 export default class App extends Component {
 	render() {
@@ -37,6 +35,7 @@ export default class App extends Component {
 								<Switch>
 									<Route path="/about" component={About}/>
 									<Route path="/home" component={Home}/>
+									<Route path="/home" component={Test}/>
 								</Switch>
 							</div>
 						</div>
