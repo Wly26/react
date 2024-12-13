@@ -8,6 +8,7 @@
     "nanoid": "^5.0.9",
     "prop-types": "^15.8.1",
     "pubsub-js": "^1.9.5",
+    "querystring": "^0.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^5.3.4",
