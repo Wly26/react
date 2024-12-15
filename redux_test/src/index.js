@@ -12,5 +12,7 @@ root.render(
 );
 // 更新状态
 store.subscribe(()=>{
-	ReactDOM.render(<App/>,document.getElementById('root'))
+    root.render(
+        <App />
+    );
 })

@@ -6,12 +6,12 @@ export default class Count extends Component {
 
     myRef = React.createRef()
     // 在最外层的index,更新状态
-    // componentDidMount(){
-	// 	//检测redux中状态的变化，只要变化，就调用render
-	// 	store.subscribe(()=>{
-	// 		this.setState({})
-	// 	})
-	// }
+    componentDidMount(){
+		//检测redux中状态的变化，只要变化，就调用render
+		store.subscribe(()=>{
+			this.setState({})
+		})
+	}
     selectNumber = () => {
         return this.myRef.current.value
     }
