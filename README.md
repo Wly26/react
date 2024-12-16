@@ -9,4 +9,4 @@ rfc‌：快速创建一个React函数组件。
 ‌rcc‌：快速创建一个React类组件。
 ‌rconst‌：快速创建一个构造函数。
 ‌rcep‌：快速创建一个使用extends方式创建的React组件。
-‌rcredux‌：快速创建一个Redux格式的类模板‌
+‌rcredux‌：快速创建一个Redux格式的类模板‌crea
