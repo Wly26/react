@@ -5,8 +5,7 @@
 import {INCREMENT,DECREMENT} from './constant'
 
 const initState = 0 //初始化状态
-export default function countReducer(preState=initState,action){
-	// console.log(preState);
+export default function countReducer(preState=initState,action){// preState=initState 没有值的时候，传默认值
 	//从action对象中获取：type、data
 	const {type,data} = action
 	//根据type决定如何加工数据
