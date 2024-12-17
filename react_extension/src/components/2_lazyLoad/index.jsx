@@ -1,5 +1,5 @@
 import React, { Component,lazy,Suspense} from 'react'
-import {NavLink,Route} from 'react-router-dom'
+import {NavLink,Route,Routes} from 'react-router-dom'
 
 // import Home from './Home'
 // import About from './About'
@@ -29,9 +29,15 @@ export default class Demo extends Component {
 						<div className="panel">
 							<div className="panel-body">
 								<Suspense fallback={<Loading/>}>
-									{/* 注册路由 */}
+									{/* 
 									<Route path="/about" component={About}/>
-									<Route path="/home" component={Home}/>
+									<Route path="/home" component={Home}/> 
+									*/}
+									{/*router6 注册路由 */}
+									<Routes>
+										<Route path="/about" element={<About />}></Route>
+										<Route path="/home" element={<Home />}></Route>
+									</Routes>
 								</Suspense>
 							</div>
 						</div>
