@@ -5,7 +5,7 @@ export default class Demo extends Component {
 	state = {count:0}
 
 	add = ()=>{
-		//对象式的setState
+		//对象式的setState,React中的setState是异步的
 		/* //1.获取原来的count值
 		const {count} = this.state
 		//2.更新状态
