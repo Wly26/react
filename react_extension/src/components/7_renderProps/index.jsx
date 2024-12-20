@@ -7,6 +7,7 @@ export default class Parent extends Component {
 		return (
 			<div className="parent">
 				<h3>我是Parent组件</h3>
+				{/* 把C组件当一个函数，给A进行渲染。 */}
 				<A render={(name)=><C name={name}/>}/>
 			</div>
 		)
@@ -21,6 +22,7 @@ class A extends Component {
 		return (
 			<div className="a">
 				<h3>我是A组件</h3>
+				{/* Vue中的具名插槽 */}
 				{this.props.render(name)}
 			</div>
 		)
