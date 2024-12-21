@@ -44,7 +44,7 @@ import ReactDOM from 'react-dom/client';
 } */
 
 // 函数式组件
-function Fn(){
+function Fn(props){
 	// ref
 	const myRef = React.useRef();
 
@@ -83,11 +83,13 @@ function Fn(){
 	return (
 		<div>
 			<p>这是一个函数式组件</p>
+			{/* 拿到props */}
+			<p>{props.a}</p>
 			<input type="text" ref={myRef}/>
 			<h2>当前求和为：{count}</h2>
 			<button onClick={add}>点我+1</button>
 			<button onClick={unmount}>卸载组件</button>
-			<button onClick={show}>点我提示数据</button> 
+			<button onClick={show}>点我提示数据</button>
 		</div>
 	)
 }

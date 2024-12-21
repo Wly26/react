@@ -8,7 +8,7 @@ export default class App extends Component {
 		return (
 			<div>
 				app
-				<Fn/>
+				<Fn a={1}/>
 			</div>
 		)
 	}
