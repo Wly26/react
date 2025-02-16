@@ -61,7 +61,7 @@
 
 
 
-		//创建组件 --可以渲染状态吗？
+		//创建组件 --可以渲染状态吗？后期加的hook是可以监听并渲染的，目前不行
 		function PersonFn (props){
 			const {name,age,sex} = props
 			return (
@@ -72,12 +72,13 @@
 					</ul>
 				)
 		}
+		// 限制组件标签属性值
 		PersonFn.propTypes = {
 			name:PropTypes.string.isRequired, //限制name必传，且为字符串
 			sex:PropTypes.string,//限制sex为字符串
 			age:PropTypes.number,//限制age为数值
 		}
-		//指定默认标签属性值
+		// 设置默认标签属性值
 		PersonFn.defaultProps = {
 			sex:'未知',//sex默认值为男
 			age:18 //age默认值为18
@@ -85,7 +86,7 @@
 		function changeWeather(){
 			PersonFn.defaultProps.sex = '男' //其实修改了值，但是没渲染
 		}
-		//渲染组件到页面
+		//渲染组件到页面，并传值
 		ReactDOM.render(<PersonFn name="jerry"/>,document.getElementById('test2'))
 	</script>
 </body>
