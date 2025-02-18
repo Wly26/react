@@ -45,6 +45,7 @@ export default class App extends Component {
 	}
 	// 修改状态
 	updataTodo = (id,done)=>{
+		console.log(id,done) // 003 true
 		// 获取原始数据列表
 		const {todos} = this.state
 		const newTodos = todos.map((todo) =>{

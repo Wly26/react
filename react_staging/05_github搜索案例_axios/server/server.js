@@ -1,7 +1,11 @@
 const express = require("express")
 const axios = require("axios")
 const app = express()
+const port = 5000;
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 /*
   请求地址： http://localhost:3000/search/users?q=aa
@@ -11,6 +15,7 @@ const app = express()
     value： function () {}
 */
 app.get("/search/users", function (req, res) {
+  // res.send("http://localhost:5000/search/users");
   const {q} = req.query
   axios({
     url: 'https://api.github.com/search/users',
@@ -21,6 +26,8 @@ app.get("/search/users", function (req, res) {
 })
 
 app.get("/search/users2", function (req, res) {
+  // res.send("http://localhost:5000/search/users2");
+
   res.json({
     items: [
       {
@@ -88,11 +95,11 @@ app.get("/search/users2", function (req, res) {
 
 
 
-app.listen(5000, "localhost", (err) => {
-  if (!err){
-  	console.log("服务器启动成功")
-  	console.log("请求github真实数据请访问：http://localhost:5000/search/users")
-  	console.log("请求本地模拟数据请访问：http://localhost:5000/search/users2")
-  } 
-  else console.log(err);
-})
+app.listen(port, "localhost", (err) => {
+  if (!err) {
+    console.log(`Example app listening on port ${port}`);
+    console.log("服务器启动成功");
+    console.log("请求github真实数据请访问：http://localhost:5000/search/users");
+    console.log("请求本地模拟数据请访问：http://localhost:5000/search/users2");
+  }
+});
