@@ -57,6 +57,7 @@ function Demo(){
 		return ()=>{
 			clearInterval(timer)
 		}
+		// []仅在组件挂载时，执行一次
 	},[])
 
 	//加的回调
