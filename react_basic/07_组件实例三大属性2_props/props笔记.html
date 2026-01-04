@@ -63,6 +63,33 @@
 
 		//创建组件 --可以渲染状态吗？后期加的hook是可以监听并渲染的，目前不行
 		//函数式组件最大的好处是可以随意调用
+
+		// 限制组件标签属性值
+		// PropTypes.string：字符串类型。
+		// PropTypes.number：数字类型。
+		// PropTypes.bool：布尔类型。
+		// PropTypes.array：数组类型。
+		// PropTypes.object：对象类型。
+		// PropTypes.func：函数类型。
+		// PropTypes.symbol：唯一的类型。
+		// PropTypes.bigint：最大值类型。
+		// PropTypes.node：可以是任何可渲染的东西（字符串、数字、组件等）。
+		// PropTypes.element：React元素类型。
+		// PropTypes.oneOf：可以是特定的几个值之一，
+		// 如： PropTypes.oneOf(['success', 'failure']) 表示 failure 或 success 之一。
+		// PropTypes.arrayOf：数组中的元素类型，
+		// 如： PropTypes.arrayOf(PropTypes.string) 表示字符串数组，等价于 TS 中的 string[]。
+		// PropTypes.objectOf：对象的值类型，
+		// 如： PropTypes.objectOf(PropTypes.string) 表示字符串对象，
+		// 等价于 TS 中的 { [key: string]: string }。
+		// PropTypes.instanceOf：特定类的实例，
+		// 如： PropTypes.instanceOf(MyClass) 表示 MyClass 的实例。
+		// PropTypes.shape({})：特定形状的对象。
+		// PropTypes.exact：限定对象类型，且可以指定对象的哪些属性必须有，哪些属性可以没有。如果出现没有定义的属性，会出现警告。
+		// 如： PropTypes.exact({ name: PropTypes.string, age: PropTypes.number }).isRequired 表示对象中包含 name 和 age 属性，且都为必填项。等价于 TS 中的 { name: string, age: number }。
+
+
+
 		function PersonFn (props){
 			const {name,age,sex} = props
 			return (

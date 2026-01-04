@@ -31,6 +31,7 @@
 
 			state = {newsArr:[]}
 
+			// 组件加载完成后
 			componentDidMount(){
 				setInterval(() => {
 					//获取原状态
@@ -41,12 +42,16 @@
 					this.setState({newsArr:[news,...newsArr]})
 				}, 1000);
 			}
-
+			// 在更新前获取快照
 			getSnapshotBeforeUpdate(){
+				// 拿到一些数据，在组件更新后调用
 				return this.refs.list.scrollHeight
 			}
-
+			// 组件更新完成后
 			componentDidUpdate(preProps,preState,height){
+				console.log('preProps',preProps)
+				console.log('preState',preState)
+				console.log('height',height)
 				this.refs.list.scrollTop += this.refs.list.scrollHeight - height
 			}
 

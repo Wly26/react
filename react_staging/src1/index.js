@@ -2,10 +2,14 @@
 import React from 'react'
 //引入ReactDOM
 import ReactDOM from 'react-dom/client'
+// 路由
+import {BrowserRouter} from 'react-router-dom'
 //引入App
 import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
 );
