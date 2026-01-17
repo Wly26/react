@@ -99,6 +99,13 @@
         componentDidMount()
         componentDidUpdate()
     	componentWillUnmount() 
+
+
+	区别				useEffect			useLayoutEffect
+	执行时机			 绘制后异步		 	  绘制前同步
+	阻塞行为			 不阻塞渲染			  阻塞渲染
+
+
 ```
 
 #### 5. Ref Hook
