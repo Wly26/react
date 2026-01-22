@@ -52,14 +52,15 @@ function Fn(props){
 	// React.useState(0) 是指：传入了一个状态
 	// React.useState会把原始值存起来，更新状态的时候，不会被覆盖
 	const [count,setCount] = React.useState(0)
+	const [data, setData] = React.useState(100);
 	//加的回调
 	function add(){
 		//setCount(count+1) //第一种写法
-		setCount(count => count+1 )
+		setCount(count => count+1)
 	}
 	// 使用生命周期钩子
 	// useEffect（()=>{自定义函数}，[检测到某个数据的改变，而跟着调用]）
-	// []意味着谁都不检测
+	// []意味着谁都不检测，只会在首次渲染时调用一次，之后不再改变
 	React.useEffect(()=>{
 		let timer = setInterval(()=>{
 			setCount(count => count+1 )
@@ -79,19 +80,34 @@ function Fn(props){
 		alert(myRef.current.value)
 	}
 
+	function addDate(){
+		console.log('data1',data);
+		setData((prev) => {
+		const newVal = prev + 1;
+		console.log(newVal); // 打印最新值
+		console.log("data3", data);// 旧值
+		return newVal;
+		});
+	}
 
-	return (
-		<div>
-			<p>这是一个函数式组件</p>
-			{/* 拿到props */}
-			<p>{props.a}</p>
-			<input type="text" ref={myRef}/>
-			<h2>当前求和为：{count}</h2>
-			<button onClick={add}>点我+1</button>
-			<button onClick={unmount}>卸载组件</button>
-			<button onClick={show}>点我提示数据</button>
-		</div>
-	)
+  return (
+    <div>
+      <p>这是一个函数式组件</p>
+      {/* 拿到props */}
+      <p>{props.a}</p>
+      <input type="text" ref={myRef} />
+      <h2>当前求和为：{count}</h2>
+      <button onClick={add}>点我+1</button>
+      <button onClick={unmount}>卸载组件</button>
+      <button onClick={show}>点我提示数据</button>
+
+      <hr />
+      <hr />
+      <hr />
+      <h2>数据：{data}</h2>
+	  <button onClick={addDate}>重新赋值</button>
+    </div>
+  );
 }
 
 export default Fn
