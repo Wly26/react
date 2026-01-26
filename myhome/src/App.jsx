@@ -40,7 +40,6 @@ export default function App() {
     { id: "02", title: "消息2", content: "content2" },
     { id: "03", title: "消息3", content: "content3"},
   ];
-  console.log(messageArr, "messageArr");
   const navigate = useNavigate();
   const goToDetail = () => {
     // 传递基本类型数据

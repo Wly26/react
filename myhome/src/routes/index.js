@@ -1,4 +1,4 @@
-import About from '../pages/About'
+import About from '../pages/About.tsx'
 import Home from '../pages/Home'
 import Detail from "../pages/Detail";
 import Detailhome from "../pages/Detailhome"
